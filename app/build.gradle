@@ -1,0 +1,25 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+java {
+    sourceCompatibility = "11"
+    targetCompatibility = "11"
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    // This dependency is used by the application.
+    implementation 'com.azure:azure-storage-blob:12.18.0'
+}
+
+
+application {
+    // Define the main class for the application.
+    mainClass = 'example.App'
+}
